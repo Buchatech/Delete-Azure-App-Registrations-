@@ -11,7 +11,7 @@ Use this if you need to clean out your Azure Active Directories app registration
 # Place your app registrations in a variable. 
 $AppRegOIds = (Get-AzADApplication).ObjectId
 
-# Loop through the app registrations to remove them. You will be prompted with confirmation to remove each one.
+# Loop through the app registrations to remove them. You will be prompted with a confirmation to remove each one.
 For ($i=0; $i -lt $AppRegOIds.Length; $i++) 
   {
    Remove-AzADApplication -objectid $AppRegOIds[$i]
